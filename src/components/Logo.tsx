@@ -1,4 +1,4 @@
-import logoImg from "@/assets/logo.jpg";
+import logoImg from "@/assets/logo.png";
 
 interface LogoProps {
   size?: "sm" | "md" | "lg";
@@ -11,7 +11,7 @@ const Logo = ({ size = "sm" }: LogoProps) => {
     <img
       src={logoImg}
       alt="First Go Services — Hire best, with us"
-      className={`${h} w-auto object-contain border-none bg-deep border-deep text-lg`}
+      className={`${h} w-auto object-contain border-none bg-deep border-deep text-4xl`}
     />
   );
 };
