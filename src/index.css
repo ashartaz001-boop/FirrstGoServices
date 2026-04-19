@@ -1,96 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 28% 16%;
+    --foreground: 210 20% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 26% 23%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 26% 23%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 19 79% 57%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 22 86% 66%;
+    --primary-dark: 19 70% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 211 22% 35%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 22% 26%;
+    --muted-foreground: 210 18% 71%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 19 79% 57%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 100% / 0.08;
+    --input: 210 26% 23%;
+    --ring: 19 79% 57%;
 
-    --radius: 0.5rem;
+    --deep: 210 33% 16%;
+    --dark: 210 30% 19%;
+    --surface: 210 28% 23%;
+    --surface-2: 210 24% 27%;
+    --surface-3: 210 20% 30%;
+    --brand-blue: 211 22% 35%;
+    --brand-dark: 211 25% 25%;
+    --text-muted: 210 18% 71%;
+    --text-dim: 210 16% 49%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 2px;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 210 28% 16%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 19 79% 57%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 210 26% 23%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 210 20% 100% / 0.08;
+    --sidebar-ring: 19 79% 57%;
   }
 }
 
@@ -98,8 +63,61 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-sans-brand {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .sec-label {
+    @apply text-[0.67rem] tracking-[0.24em] uppercase text-primary font-medium mb-3 flex items-center gap-3;
+  }
+  .sec-label::before {
+    content: '';
+    @apply block w-7 h-[2px] bg-primary rounded-sm;
+  }
+  .sec-title {
+    @apply font-display font-bold leading-[1.15] text-white mb-5;
+    font-size: clamp(2rem, 3.8vw, 3rem);
+  }
+  .sec-title em {
+    @apply not-italic text-primary;
+    font-style: italic;
+  }
+  .sec-body {
+    @apply text-[0.96rem] text-[hsl(var(--text-muted))] max-w-[560px] leading-[1.9] font-light;
+  }
+  .fu {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+  .fu.vis {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: hsl(var(--deep)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.4); border-radius: 3px; }
