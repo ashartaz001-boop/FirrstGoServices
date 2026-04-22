@@ -16,7 +16,7 @@ const Logo = ({ size = "sm" }: LogoProps) => {
     <img
       src={logoImg}
       alt="First Go Services — Hire best, with us"
-      className={`${h} w-auto border-none border-deep font-normal text-9xl object-fill bg-deep`}
+      className={`${h} w-auto border-none font-normal text-9xl object-contain bg-transparent`}
     />
   );
 };
