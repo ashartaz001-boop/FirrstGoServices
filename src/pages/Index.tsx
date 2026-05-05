@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Code2, Briefcase, Users, Phone, ArrowRight } from "lucide-react";
+import { Code2, Briefcase, Users, ArrowRight } from "lucide-react";
 import Logo from "@/components/Logo";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { toast } from "sonner";
