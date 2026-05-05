@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Code2, Briefcase, Users, Phone, ArrowRight } from "lucide-react";
+import { Code2, Briefcase, Users, ArrowRight } from "lucide-react";
 import Logo from "@/components/Logo";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { toast } from "sonner";
@@ -268,10 +268,6 @@ const Index = () => {
           <h2 className="sec-title">Let's build your <em>team</em></h2>
           <p className="sec-body mx-auto">We are a global consultancy dedicated to transforming businesses through the power of exceptional talent.</p>
 
-          <a href="tel:+917300434568" className="font-display text-[1.75rem] text-primary tracking-[0.06em] mt-9 mb-2 inline-flex items-center gap-3 hover:text-primary-light transition-colors">
-            <Phone className="w-5 h-5" /> +91 73004 34568
-          </a>
-          <div className="text-[0.74rem] text-text-dim tracking-[0.14em] uppercase">Call us to start the conversation</div>
 
           <form onSubmit={onSubmit} className="mt-14 grid gap-4 text-left">
             <div className="grid sm:grid-cols-2 gap-4">
