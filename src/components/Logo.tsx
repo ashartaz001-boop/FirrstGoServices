@@ -21,7 +21,7 @@ const Logo = ({ size = "sm", showTagline = true }: LogoProps) => {
       : "text-[0.45rem] sm:text-[0.5rem] md:text-[0.55rem]";
 
   return (
-    <div className="inline-flex flex-col items-center gap-0">
+    <div className="inline-flex flex-col items-center">
       <img
         src={logoImg}
         alt="First Go Services — Hire Best With Us"
@@ -29,7 +29,7 @@ const Logo = ({ size = "sm", showTagline = true }: LogoProps) => {
       />
       {showTagline && (
         <span
-          className={`${taglineSize} -mt-1 tracking-[0.18em] uppercase text-primary font-medium`}
+          className={`${taglineSize} -mt-2 tracking-[0.18em] uppercase text-primary font-medium`}
         >
           Hire Best With Us
         </span>
