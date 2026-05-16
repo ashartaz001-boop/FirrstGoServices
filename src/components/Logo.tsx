@@ -29,7 +29,7 @@ const Logo = ({ size = "sm", showTagline = true }: LogoProps) => {
       />
       {showTagline && (
         <span
-          className={`${taglineSize} -mt-2 tracking-[0.18em] uppercase text-primary font-medium`}
+          className={`${taglineSize} -mt-3 tracking-[0.14em] uppercase text-primary font-medium`}
         >
           Hire Best With Us
         </span>
