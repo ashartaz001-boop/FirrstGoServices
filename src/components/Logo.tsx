@@ -15,10 +15,10 @@ const Logo = ({ size = "sm", showTagline = true }: LogoProps) => {
 
   const taglineSize =
     size === "lg"
-      ? "text-[0.65rem] sm:text-xs md:text-sm"
+      ? "text-[0.55rem] sm:text-[0.6rem] md:text-xs"
       : size === "md"
-      ? "text-[0.6rem] sm:text-[0.65rem] md:text-xs"
-      : "text-[0.5rem] sm:text-[0.55rem] md:text-[0.6rem]";
+      ? "text-[0.5rem] sm:text-[0.55rem] md:text-[0.6rem]"
+      : "text-[0.45rem] sm:text-[0.5rem] md:text-[0.55rem]";
 
   return (
     <div className="inline-flex flex-col items-center gap-0">
