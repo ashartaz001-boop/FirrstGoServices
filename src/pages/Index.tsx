@@ -42,16 +42,31 @@ const formSchema = z.object({
 const Index = () => {
   useFadeIn();
   const [form, setForm] = useState({ name: "", email: "", company: "", need: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = formSchema.safeParse(form);
     if (!result.success) {
       toast.error(result.error.errors[0].message);
       return;
     }
-    toast.success("Enquiry sent. We'll be in touch shortly.");
-    setForm({ name: "", email: "", company: "", need: "", message: "" });
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-enquiry", {
+        body: result.data,
+      });
+      if (error || (data && (data as any).error)) {
+        throw new Error(error?.message || (data as any)?.error || "Failed to send");
+      }
+      toast.success("Enquiry sent. We'll be in touch shortly.");
+      setForm({ name: "", email: "", company: "", need: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      toast.error("Could not send enquiry. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
