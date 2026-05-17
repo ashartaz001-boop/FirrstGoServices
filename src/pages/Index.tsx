@@ -4,6 +4,7 @@ import Logo from "@/components/Logo";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { toast } from "sonner";
 import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const industries = [
   "IT & Technology", "Healthcare", "FMCG & Retail", "Aviation",
