@@ -5,7 +5,7 @@ interface LogoProps {
   showTagline?: boolean;
 }
 
-const Logo = ({ size = "sm", showTagline = true }: LogoProps) => {
+const Logo = ({ size = "sm", showTagline = false }: LogoProps) => {
   const h =
     size === "lg"
       ? "h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32"
