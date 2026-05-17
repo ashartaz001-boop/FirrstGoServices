@@ -284,7 +284,6 @@ const Index = () => {
           <h2 className="sec-title">Let's build your <em>team</em></h2>
           <p className="sec-body mx-auto">We are a global consultancy dedicated to transforming businesses through the power of exceptional talent.</p>
 
-
           <form onSubmit={onSubmit} className="mt-14 grid gap-4 text-left">
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
@@ -320,6 +319,21 @@ const Index = () => {
               {sending ? "Sending..." : "Send Enquiry"}
             </button>
           </form>
+
+          <div className="mt-16 pt-10 border-t border-white/10 text-left grid sm:grid-cols-3 gap-8">
+            <div>
+              <div className="text-[0.68rem] tracking-[0.16em] uppercase text-text-dim mb-2">Company Name</div>
+              <div className="text-[0.9rem] text-white font-medium">First Go Services</div>
+            </div>
+            <div>
+              <div className="text-[0.68rem] tracking-[0.16em] uppercase text-text-dim mb-2">Email Address</div>
+              <a href="mailto:careers@firstgoservices.in" className="text-[0.9rem] text-white font-medium no-underline hover:text-primary transition-colors">careers@firstgoservices.in</a>
+            </div>
+            <div>
+              <div className="text-[0.68rem] tracking-[0.16em] uppercase text-text-dim mb-2">Corporate Office</div>
+              <div className="text-[0.9rem] text-white font-medium">Mansarovar, Jaipur, Rajasthan, India - 302020</div>
+            </div>
+          </div>
         </div>
       </section>
 
