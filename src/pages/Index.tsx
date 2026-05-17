@@ -316,8 +316,8 @@ const Index = () => {
               <label className="text-[0.68rem] tracking-[0.16em] uppercase text-text-dim">Message</label>
               <textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} maxLength={1000} required className="bg-surface border border-white/10 text-foreground px-4 py-3 text-[0.88rem] outline-none focus:border-primary transition-colors rounded-sm resize-none" />
             </div>
-            <button type="submit" className="bg-primary text-primary-foreground px-9 py-4 text-[0.82rem] tracking-[0.1em] uppercase font-medium hover:bg-primary-light hover:-translate-y-0.5 transition-all rounded-sm mt-2 justify-self-start">
-              Send Enquiry
+            <button type="submit" disabled={sending} className="bg-primary text-primary-foreground px-9 py-4 text-[0.82rem] tracking-[0.1em] uppercase font-medium hover:bg-primary-light hover:-translate-y-0.5 transition-all rounded-sm mt-2 justify-self-start disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0">
+              {sending ? "Sending..." : "Send Enquiry"}
             </button>
           </form>
         </div>
